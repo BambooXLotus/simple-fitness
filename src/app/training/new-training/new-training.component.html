@@ -1,0 +1,29 @@
+<section fxLayoutAlign="center">
+    <mat-card fxFlex="700px" fxFlex.lt-md="95">
+        <mat-card-title>Enter your max lifts</mat-card-title>
+        <mat-card-subtitle>Squat</mat-card-subtitle>
+        <mat-card-content>
+            <div class="example-container">
+                <mat-form-field>
+                    <input matInput placeholder="Weight">
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-select placeholder="Reps">
+                        <mat-option *ngFor="let rep of reps" [value]="rep">{{ rep }}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-select placeholder="RPE">
+                        <mat-option *ngFor="let rpe of rpes" [value]="rpe">{{ rpe }}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="Estimated 1RM" disabled>
+                </mat-form-field>
+            </div>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button>SAVE</button>
+        </mat-card-actions>
+    </mat-card>
+</section>
